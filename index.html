@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="woow">
+    <div class="overlay"></div>
+  <nav class="header">
+    <button id="createBtn" class="createBtn"><i class='bx bx-plus'></i>Add Contact</button>
+  </nav> 
+<div class="contactsContainer">
+<div class="contacts">
+<div class="contactTabs">
+<button id="contactsBtn" class="contactsBtn">Contacts</button>
+<button id="trushBtn" class="trushBtn">Trush</button>
+</div>
+<div class="currentContacts">
+<div class="contact-header">
+<h3>Name</h3>
+<h3  class="hidenData">Email</h3>
+<h3  class="hidenData">Phone</h3>
+<h3>More</h3>
+</div>
+<div class="contactContainer">
+    <div class="contactCalling">
+        <h3>John Doe</h3>
+        <a  class="hidenData"  href="#"><h3>johndoe@gmail.com</h3></a>
+        <a  class="hidenData"  href="#"> <h3>+256 745679802</h3></a>
+        <div class="moreDetails">
+           <button id="detailsBtn" class="features"> <i class='bx bxs-user-detail features'></i></button>
+           <button class="deleteBtn features"> <i class='bx bx-trash features'></i></button>
+        </div>
+        </div>
+</div>
+</div>
+<div class="trashContent">
+    <div class="contact-header">
+        <h3 >Name</h3>
+        <h3 class="hidenData">Email</h3>
+        <h3 class="hidenData">Phone</h3>
+        <h3>More</h3>
+        </div>
+        <div class="contactContainer">
+            <div class="contactCalling">
+                <h3>John Doe</h3>
+                <a  class="hidenData"  href="#"><h3>johndoe@gmail.com</h3></a>
+                <a  class="hidenData"  href="#"> <h3>+256 745679802</h3></a>
+                <div class="moreDetails">
+                   <button id="detailsBtn" class="features"> <i class='bx bxs-user-detail features'></i></button>
+                   <button class="deleteBtn features"> <i class='bx bx-trash features'></i></button>
+                </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="addContactForm addContactFormActive">
+<div class="form-header">
+    <h3>Add Contact</h3>
+    <i class='bx bx-user'></i>
+</div>
+<form class="contactSubmissionForm" action="">
+<div class="form-field">
+<label for="name"> Full Name</label>
+<input type="text" id="name" placeholder="John Doe">
+</div>
+<div class="form-field">
+<label for="email">Email</label>
+<input type="email" id="email" placeholder="Johndoe@gmail.com">
+</div>
+<div class="form-field">
+<label for="phone"> Contact</label>
+<input type="tel" id="number" placeholder="+256 745679802">
+</div>
+<div class="form-btns">
+    <button type="button" id="cancelBtn" class="cancelBtn">Back</button>
+    <button type="submit" id="saveBtn" class="saveBtn">Save</button>
+</div>
+</form>
+</div>
+<div class="userDetailcontainer userDetailcontainerActive">
+    <div class="details">
+        <div class="headerSect">
+            <h3>Contact Details</h3>
+            <i class='bx bx-user'></i>
+        </div>
+        <div class="detailsForm">
+            <div class="name">
+                <h3>Name:</h3>
+                <h3>John Doe</h3>
+                </div>
+            <div class="name">
+                <h3>Email:</h3>
+                <h3>johndoe@gmail.com</h3>
+                </div>
+            <div class="name">
+                <h3>Id:</h3>
+                <h3>236</h3>
+                </div>
+            <div class="name">
+                <h3>Created At:</h3>
+                <h3>12/12/2024</h3>
+                </div>
+            <div class="name">
+                <h3>Description:</h3>
+                <h3>Engineer</h3>
+                </div>
+        <div class="back">
+            <button id="backBtn">Back</button>
+        </div>
+            </div>
+    </div>
+</div>
+<div class="deleteAlertForm deleteAlertFormActive">
+<div class="alert-header">
+    <i class='bx bx-x'></i>
+</div>
+<div class="alert-content">
+    <h3>Are You Sure?</h3>
+    <p>Do really want to delete the contact?</p>
+    <p>The deleted contacts will be stored in the trush.</p>
+</div>
+    <div class="alert-btns">
+        <button id="quitBtn">Cancel</button>
+        <button id="deleteBtn" class="deleteBtn">Delete</button>
+ </div> 
+</div>
+<script src="app.js"></script>
+</body>
+</html>

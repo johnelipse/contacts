@@ -1,0 +1,887 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.header .createBtn {
+  display: flex;
+  background-color: #aadefa;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+}
+.header .createBtn .bx-plus {
+  font-size: 1rem;
+}
+.header .createBtn:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+
+.contacts {
+  padding: 2rem;
+}
+.contacts .contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.6rem;
+}
+.contacts a {
+  text-decoration: none;
+  color: black;
+}
+.contacts .bx {
+  font-size: 1.2rem;
+}
+.contacts .moreDetails {
+  display: flex;
+  gap: 0.4rem;
+}
+.contacts .contactCalling {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts .contact {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts .trashContent {
+  display: none;
+}
+.contacts h3 {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+.contacts .features {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.contacts .features:hover {
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+.contacts .contactTabs {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts .contactTabs button {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.contacts .contactTabs .activeTab {
+  background-color: #aadefa;
+  border-radius: 0.5rem;
+  transition: all 0.7s ease;
+}
+
+.addContactForm {
+  background-color: wheat;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  position: fixed;
+  transition: all 0.8s ease;
+  top: 10%;
+  left: 15%;
+  width: 70%;
+}
+.addContactForm .form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.addContactForm .form-header .bx-user {
+  font-size: 7rem;
+  background-color: #aadefa;
+  color: blue;
+  border-radius: 50%;
+}
+.addContactForm .form-field {
+  display: flex;
+  margin-bottom: 1.3rem;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.addContactForm .form-field input {
+  padding: 0.3rem 0.5rem;
+  width: 98%;
+  border: 1px solid gray;
+  background-color: transparent;
+  outline: none;
+}
+.addContactForm .form-field input:focus {
+  outline: 1px solid #aadefa;
+}
+.addContactForm .form-field .form-btns button {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.addContactForm .form-btns {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.9rem;
+}
+.addContactForm .form-btns button {
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #aadefa;
+  cursor: pointer;
+}
+.addContactForm .form-btns button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+
+.addContactFormActive {
+  left: -150%;
+  background-color: wheat;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  position: fixed;
+  transition: all 0.8s ease;
+  top: 10%;
+  width: 70%;
+}
+.addContactFormActive .form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.addContactFormActive .form-header .bx-user {
+  font-size: 7rem;
+  background-color: #aadefa;
+  color: blue;
+  border-radius: 50%;
+}
+.addContactFormActive .form-field {
+  display: flex;
+  margin-bottom: 1.3rem;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.addContactFormActive .form-field input {
+  padding: 0.3rem 0.5rem;
+  width: 98%;
+  border: 1px solid gray;
+  background-color: transparent;
+  outline: none;
+}
+.addContactFormActive .form-field input:focus {
+  outline: 1px solid #aadefa;
+}
+.addContactFormActive .form-field .form-btns button {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.addContactFormActive .form-btns {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.9rem;
+}
+.addContactFormActive .form-btns button {
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #aadefa;
+  cursor: pointer;
+}
+.addContactFormActive .form-btns button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+
+.details {
+  background-color: wheat;
+  padding: 1rem;
+  position: fixed;
+  right: 23%;
+  top: 1%;
+  width: 65%;
+}
+.details .headerSect {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+.details .headerSect h3 {
+  font-weight: normal;
+  font-size: 1.9rem;
+}
+.details .headerSect .bx-user {
+  font-size: 7rem;
+  background-color: #aadefa;
+  color: blue;
+  border-radius: 50%;
+}
+.details .detailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.details .detailsForm .name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.details .back {
+  text-align: end;
+}
+.details .back button {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #aadefa;
+  cursor: pointer;
+}
+.details .back button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+
+.userDetailcontainer .details {
+  display: block;
+}
+
+.userDetailcontainerActive .details {
+  display: none;
+}
+
+.deleteAlertForm {
+  background-color: wheat;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: fixed;
+  transition: all 0.8s ease;
+  top: 10%;
+  left: 15%;
+  width: 70%;
+}
+.deleteAlertForm .alert-header {
+  margin-bottom: 1.6rem;
+}
+.deleteAlertForm .alert-header .bx-x {
+  font-size: 6.5rem;
+  color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+.deleteAlertForm .alert-content {
+  margin-bottom: 1.6rem;
+}
+.deleteAlertForm .alert-content h3 {
+  font-weight: normal;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+.deleteAlertForm .alert-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.deleteAlertForm .alert-btns button {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #aadefa;
+  cursor: pointer;
+}
+.deleteAlertForm .alert-btns button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+.deleteAlertForm .alert-btns .deleteBtn {
+  background-color: red;
+  color: white;
+}
+
+.deleteAlertFormActive {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .header {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header .createBtn {
+    display: flex;
+    background-color: #aadefa;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .header .createBtn .bx-plus {
+    font-size: 1rem;
+  }
+  .header .createBtn:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .contacts {
+    padding: 1rem;
+  }
+  .contacts .hidenData {
+    display: none;
+  }
+  .contacts .contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 0.6rem;
+  }
+  .contacts a {
+    text-decoration: none;
+    color: black;
+  }
+  .contacts .bx {
+    font-size: 1.2rem;
+  }
+  .contacts .moreDetails {
+    display: flex;
+    gap: 0.4rem;
+  }
+  .contacts .contact {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts .trashContent {
+    display: none;
+  }
+  .contacts h3 {
+    font-weight: normal;
+    font-size: 0.9rem;
+  }
+  .contacts .features {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .contacts .features:hover {
+    transform: scale(0.9);
+    transition: 0.5s;
+  }
+  .contacts .contactTabs {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts .contactTabs button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .contacts .contactTabs .activeTab {
+    background-color: #aadefa;
+    border-radius: 0.5rem;
+    transition: all 0.7s ease;
+  }
+  .addContactForm {
+    background-color: wheat;
+    padding: 2rem 1rem;
+    border-radius: 0rem;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+  }
+  .addContactForm .form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .addContactForm .form-header .bx-user {
+    font-size: 6rem;
+    background-color: #aadefa;
+    color: blue;
+    border-radius: 50%;
+  }
+  .addContactForm .form-field {
+    display: flex;
+    margin-bottom: 1.3rem;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .addContactForm .form-field input {
+    padding: 0.3rem 0.5rem;
+    width: 98%;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+  }
+  .addContactForm .form-field input:focus {
+    outline: 1px solid #aadefa;
+  }
+  .addContactForm .form-field .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .addContactForm .form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 1rem;
+    gap: 0.9rem;
+  }
+  .addContactForm .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .addContactForm .form-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .addContactFormActive {
+    left: -150%;
+  }
+  .details {
+    background-color: wheat;
+    padding: 1rem;
+    position: fixed;
+    right: 23%;
+    top: 1%;
+    width: 65%;
+  }
+  .details .headerSect {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .details .headerSect h3 {
+    font-weight: normal;
+    font-size: 1.9rem;
+  }
+  .details .headerSect .bx-user {
+    font-size: 7rem;
+    background-color: #aadefa;
+    color: blue;
+    border-radius: 50%;
+  }
+  .details .detailsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .details .detailsForm .name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .details .back {
+    text-align: end;
+  }
+  .details .back button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .details .back button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .userDetailcontainer .details {
+    display: block;
+  }
+  .userDetailcontainerActive .details {
+    display: none;
+  }
+  .deleteAlertForm {
+    background-color: wheat;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 14%;
+    left: 1%;
+    width: 100%;
+  }
+  .deleteAlertForm .alert-header {
+    margin-bottom: 1.6rem;
+  }
+  .deleteAlertForm .alert-header .bx-x {
+    font-size: 6.5rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+  .deleteAlertForm .alert-content {
+    margin-bottom: 1.6rem;
+  }
+  .deleteAlertForm .alert-content h3 {
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  .deleteAlertForm .alert-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .deleteAlertForm .alert-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .deleteAlertForm .alert-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .deleteAlertForm .alert-btns .deleteBtn {
+    background-color: red;
+    color: white;
+  }
+}
+@media (max-width: 360px) {
+  .header {
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header .createBtn {
+    display: flex;
+    background-color: #aadefa;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .header .createBtn .bx-plus {
+    font-size: 1rem;
+  }
+  .header .createBtn:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .contacts {
+    padding: 1rem;
+  }
+  .contacts .hidenData {
+    display: none;
+  }
+  .contacts .contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 0.6rem;
+  }
+  .contacts a {
+    text-decoration: none;
+    color: black;
+  }
+  .contacts .bx {
+    font-size: 1.2rem;
+  }
+  .contacts .moreDetails {
+    display: flex;
+    gap: 0.4rem;
+  }
+  .contacts .contact {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts .trashContent {
+    display: none;
+  }
+  .contacts h3 {
+    font-weight: normal;
+    font-size: 0.9rem;
+  }
+  .contacts .features {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .contacts .features:hover {
+    transform: scale(0.9);
+    transition: 0.5s;
+  }
+  .contacts .contactTabs {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts .contactTabs button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .contacts .contactTabs .activeTab {
+    background-color: #aadefa;
+    border-radius: 0.5rem;
+    transition: all 0.7s ease;
+  }
+  .addContactForm {
+    background-color: wheat;
+    padding: 2rem 1rem;
+    border-radius: 0rem;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+  }
+  .addContactForm .form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .addContactForm .form-header .bx-user {
+    font-size: 6rem;
+    background-color: #aadefa;
+    color: blue;
+    border-radius: 50%;
+  }
+  .addContactForm .form-field {
+    display: flex;
+    margin-bottom: 1.3rem;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .addContactForm .form-field input {
+    padding: 0.3rem 0.5rem;
+    width: 98%;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+  }
+  .addContactForm .form-field input:focus {
+    outline: 1px solid #aadefa;
+  }
+  .addContactForm .form-field .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .addContactForm .form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 1rem;
+    gap: 0.9rem;
+  }
+  .addContactForm .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .addContactForm .form-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .addContactFormActive {
+    left: -150%;
+  }
+  .details {
+    background-color: wheat;
+    padding: 1rem;
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    width: 100%;
+  }
+  .details .headerSect {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .details .headerSect h3 {
+    font-weight: normal;
+    font-size: 1.6rem;
+  }
+  .details .headerSect .bx-user {
+    font-size: 5rem;
+    background-color: #aadefa;
+    color: blue;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+  }
+  .details .detailsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+  }
+  .details .detailsForm .name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .details .back {
+    text-align: end;
+  }
+  .details .back button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .details .back button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .userDetailcontainer .details {
+    display: block;
+  }
+  .userDetailcontainerActive .details {
+    display: none;
+  }
+  .deleteAlertForm {
+    background-color: wheat;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 14%;
+    left: 1%;
+    width: 100%;
+  }
+  .deleteAlertForm .alert-header {
+    margin-bottom: 1.6rem;
+  }
+  .deleteAlertForm .alert-header .bx-x {
+    font-size: 6.5rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+  .deleteAlertForm .alert-content {
+    margin-bottom: 1.6rem;
+  }
+  .deleteAlertForm .alert-content h3 {
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  .deleteAlertForm .alert-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .deleteAlertForm .alert-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .deleteAlertForm .alert-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .deleteAlertForm .alert-btns .deleteBtn {
+    background-color: red;
+    color: white;
+  }
+}/*# sourceMappingURL=style.css.map */
