@@ -101,6 +101,13 @@ body {
   transition: all 0.7s ease;
 }
 
+.trashCoantainer {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .addContactForm {
   background-color: wheat;
   padding: 2rem 1rem;
@@ -292,7 +299,7 @@ body {
   display: none;
 }
 
-.deleteAlertForm {
+.alert .deleteAlertForm {
   background-color: wheat;
   padding: 1rem 1rem;
   border-radius: 1rem;
@@ -303,29 +310,29 @@ body {
   left: 15%;
   width: 70%;
 }
-.deleteAlertForm .alert-header {
+.alert .deleteAlertForm .alert-header {
   margin-bottom: 1.6rem;
 }
-.deleteAlertForm .alert-header .bx-x {
+.alert .deleteAlertForm .alert-header .bx-x {
   font-size: 6.5rem;
   color: red;
   border: 1px solid red;
   border-radius: 50%;
 }
-.deleteAlertForm .alert-content {
+.alert .deleteAlertForm .alert-content {
   margin-bottom: 1.6rem;
 }
-.deleteAlertForm .alert-content h3 {
+.alert .deleteAlertForm .alert-content h3 {
   font-weight: normal;
   font-size: 1.9rem;
   margin-bottom: 1rem;
 }
-.deleteAlertForm .alert-btns {
+.alert .deleteAlertForm .alert-btns {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-.deleteAlertForm .alert-btns button {
+.alert .deleteAlertForm .alert-btns button {
   padding: 0.3rem 1rem;
   font-size: 1rem;
   border: none;
@@ -333,18 +340,65 @@ body {
   background-color: #aadefa;
   cursor: pointer;
 }
-.deleteAlertForm .alert-btns button:hover {
+.alert .deleteAlertForm .alert-btns button:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: scale(0.9);
   transition: 0.2s;
 }
-.deleteAlertForm .alert-btns .deleteBtn {
+.alert .deleteAlertForm .alert-btns .deleteBtn {
   background-color: red;
   color: white;
 }
 
-.deleteAlertFormActive {
-  display: none;
+.alertActive .deleteAlertForm {
+  background-color: wheat;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: fixed;
+  transition: all 0.8s ease;
+  top: 10%;
+  left: -150%;
+  width: 70%;
+}
+.alertActive .deleteAlertForm .alert-header {
+  margin-bottom: 1.6rem;
+}
+.alertActive .deleteAlertForm .alert-header .bx-x {
+  font-size: 6.5rem;
+  color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+.alertActive .deleteAlertForm .alert-content {
+  margin-bottom: 1.6rem;
+}
+.alertActive .deleteAlertForm .alert-content h3 {
+  font-weight: normal;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+.alertActive .deleteAlertForm .alert-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.alertActive .deleteAlertForm .alert-btns button {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #aadefa;
+  cursor: pointer;
+}
+.alertActive .deleteAlertForm .alert-btns button:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+.alertActive .deleteAlertForm .alert-btns .deleteBtn {
+  background-color: red;
+  color: white;
 }
 
 .overlay {
