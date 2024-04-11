@@ -10,14 +10,40 @@ body {
   position: relative;
 }
 
+.contactsContainer {
+  display: flex;
+  background-color: white;
+  color: black;
+}
+.contactsContainer .section-image {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+}
+.contactsContainer .section-image img {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contactsContainer .contacts {
+  width: 66%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .header {
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 .header .createBtn {
   display: flex;
-  background-color: #aadefa;
+  background-color: black;
+  color: white;
   border: none;
   cursor: pointer;
   align-items: center;
@@ -26,15 +52,16 @@ body {
 }
 .header .createBtn .bx-plus {
   font-size: 1rem;
+  color: white;
 }
 .header .createBtn:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transform: scale(0.9);
+  background-color: rgba(0, 0, 0, 0.91);
   transition: 0.2s;
 }
 
 .contacts {
-  padding: 2rem;
+  padding: 0.2rem 1rem;
 }
 .contacts .contact-header {
   display: flex;
@@ -49,6 +76,7 @@ body {
 }
 .contacts .bx {
   font-size: 1.2rem;
+  color: black;
 }
 .contacts .moreDetails {
   display: flex;
@@ -84,12 +112,14 @@ body {
 }
 .contacts .contactTabs {
   margin-bottom: 2rem;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .contacts .contactTabs button {
   padding: 0.3rem 1rem;
+  color: black;
   font-size: 1rem;
   border: none;
   background-color: transparent;
@@ -109,14 +139,15 @@ body {
 }
 
 .addContactForm {
-  background-color: wheat;
+  background-color: black;
+  color: white;
   padding: 2rem 1rem;
   border-radius: 1rem;
   position: fixed;
-  transition: all 0.8s ease;
-  top: 10%;
-  left: 15%;
-  width: 70%;
+  transition: all 0.5s ease;
+  top: 3.69%;
+  left: 35%;
+  width: 22.5rem;
 }
 .addContactForm .form-header {
   display: flex;
@@ -127,8 +158,8 @@ body {
 }
 .addContactForm .form-header .bx-user {
   font-size: 7rem;
-  background-color: #aadefa;
-  color: blue;
+  background-color: white;
+  color: black;
   border-radius: 50%;
 }
 .addContactForm .form-field {
@@ -138,14 +169,16 @@ body {
   gap: 0.6rem;
 }
 .addContactForm .form-field input {
-  padding: 0.3rem 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
   width: 98%;
+  color: white;
   border: 1px solid gray;
   background-color: transparent;
   outline: none;
 }
 .addContactForm .form-field input:focus {
-  outline: 1px solid #aadefa;
+  outline: 1px solid white;
 }
 .addContactForm .form-field .form-btns button {
   padding: 0.3rem 1rem;
@@ -165,7 +198,7 @@ body {
   font-size: 0.9rem;
   border: none;
   border-radius: 0.4rem;
-  background-color: #aadefa;
+  background-color: white;
   cursor: pointer;
 }
 .addContactForm .form-btns button:hover {
@@ -241,16 +274,19 @@ body {
 }
 
 .details {
-  background-color: wheat;
+  background-color: black;
+  color: white;
   padding: 1rem;
+  border-radius: 0.5rem;
   position: fixed;
-  right: 23%;
-  top: 1%;
-  width: 65%;
+  top: 3.69%;
+  left: 35%;
+  width: 22.5rem;
 }
 .details .headerSect {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
   gap: 0.6rem;
   align-items: center;
 }
@@ -260,8 +296,8 @@ body {
 }
 .details .headerSect .bx-user {
   font-size: 7rem;
-  background-color: #aadefa;
-  color: blue;
+  background-color: white;
+  color: black;
   border-radius: 50%;
 }
 .details .detailsForm {
@@ -282,7 +318,7 @@ body {
   font-size: 1rem;
   border: none;
   border-radius: 0.4rem;
-  background-color: #aadefa;
+  background-color: white;
   cursor: pointer;
 }
 .details .back button:hover {
@@ -300,21 +336,22 @@ body {
 }
 
 .alert .deleteAlertForm {
-  background-color: wheat;
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
   padding: 1rem 1rem;
   border-radius: 1rem;
   text-align: center;
   position: fixed;
   transition: all 0.8s ease;
-  top: 10%;
-  left: 15%;
-  width: 70%;
+  top: 25%;
+  left: 35%;
+  width: 26rem;
 }
 .alert .deleteAlertForm .alert-header {
   margin-bottom: 1.6rem;
 }
 .alert .deleteAlertForm .alert-header .bx-x {
-  font-size: 6.5rem;
+  font-size: 5rem;
   color: red;
   border: 1px solid red;
   border-radius: 50%;
@@ -337,7 +374,8 @@ body {
   font-size: 1rem;
   border: none;
   border-radius: 0.4rem;
-  background-color: #aadefa;
+  background-color: white;
+  font-weight: bold;
   cursor: pointer;
 }
 .alert .deleteAlertForm .alert-btns button:hover {
@@ -414,15 +452,28 @@ body {
   display: none;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 890px) {
+  .contactsContainer {
+    display: flex;
+    background-color: white;
+    color: black;
+  }
+  .contactsContainer .section-image {
+    display: none;
+  }
+  .contactsContainer .contacts {
+    width: 100%;
+    box-shadow: none;
+  }
   .header {
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
     display: flex;
     justify-content: flex-end;
   }
   .header .createBtn {
     display: flex;
-    background-color: #aadefa;
+    background-color: black;
+    color: white;
     border: none;
     cursor: pointer;
     align-items: center;
@@ -434,7 +485,7 @@ body {
   }
   .header .createBtn:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(0.9);
+    background-color: rgba(0, 0, 0, 0.911);
     transition: 0.2s;
   }
   .contacts {
@@ -502,42 +553,46 @@ body {
     transition: all 0.7s ease;
   }
   .addContactForm {
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 2rem 1rem;
-    border-radius: 0rem;
+    border-radius: 0.5rem;
     position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
+    transition: all 0.3s ease;
+    top: 25%;
+    left: 7%;
+    width: 85%;
   }
   .addContactForm .form-header {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   .addContactForm .form-header .bx-user {
     font-size: 6rem;
-    background-color: #aadefa;
-    color: blue;
+    background-color: white;
+    color: black;
     border-radius: 50%;
   }
   .addContactForm .form-field {
     display: flex;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.2rem;
     flex-direction: column;
     gap: 0.6rem;
   }
   .addContactForm .form-field input {
-    padding: 0.3rem 0.5rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.5rem;
     width: 98%;
+    color: white;
     border: 1px solid gray;
     background-color: transparent;
     outline: none;
   }
   .addContactForm .form-field input:focus {
-    outline: 1px solid #aadefa;
+    outline: 1px solid white;
   }
   .addContactForm .form-field .form-btns button {
     padding: 0.3rem 1rem;
@@ -550,7 +605,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-bottom: 1rem;
     gap: 0.9rem;
   }
   .addContactForm .form-btns button {
@@ -558,7 +612,7 @@ body {
     font-size: 0.9rem;
     border: none;
     border-radius: 0.4rem;
-    background-color: #aadefa;
+    background-color: white;
     cursor: pointer;
   }
   .addContactForm .form-btns button:hover {
@@ -568,40 +622,105 @@ body {
   }
   .addContactFormActive {
     left: -150%;
-  }
-  .details {
     background-color: wheat;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
     position: fixed;
-    right: 23%;
-    top: 1%;
-    width: 65%;
+    transition: all 0.8s ease;
+    top: 10%;
+    width: 70%;
   }
-  .details .headerSect {
+  .addContactFormActive .form-header {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
     align-items: center;
+    margin-bottom: 2rem;
   }
-  .details .headerSect h3 {
-    font-weight: normal;
-    font-size: 1.9rem;
-  }
-  .details .headerSect .bx-user {
+  .addContactFormActive .form-header .bx-user {
     font-size: 7rem;
     background-color: #aadefa;
     color: blue;
     border-radius: 50%;
   }
+  .addContactFormActive .form-field {
+    display: flex;
+    margin-bottom: 1.3rem;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .addContactFormActive .form-field input {
+    padding: 0.3rem 0.5rem;
+    width: 98%;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+  }
+  .addContactFormActive .form-field input:focus {
+    outline: 1px solid #aadefa;
+  }
+  .addContactFormActive .form-field .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .addContactFormActive .form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.9rem;
+  }
+  .addContactFormActive .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .addContactFormActive .form-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .details {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0rem;
+    position: fixed;
+    top: 25%;
+    left: 8%;
+    width: 85%;
+  }
+  .details .headerSect {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .details .headerSect h3 {
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+  .details .headerSect .bx-user {
+    font-size: 6rem;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+  }
   .details .detailsForm {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.8rem;
   }
   .details .detailsForm .name {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
   }
   .details .back {
     text-align: end;
@@ -611,7 +730,7 @@ body {
     font-size: 1rem;
     border: none;
     border-radius: 0.4rem;
-    background-color: #aadefa;
+    background-color: white;
     cursor: pointer;
   }
   .details .back button:hover {
@@ -625,40 +744,92 @@ body {
   .userDetailcontainerActive .details {
     display: none;
   }
-  .deleteAlertForm {
+  .alert .deleteAlertForm {
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 29%;
+    left: 25%;
+    width: 27rem;
+  }
+  .alert .deleteAlertForm .alert-header {
+    margin-bottom: 1.6rem;
+  }
+  .alert .deleteAlertForm .alert-header .bx-x {
+    font-size: 5rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+  .alert .deleteAlertForm .alert-content {
+    margin-bottom: 1.6rem;
+  }
+  .alert .deleteAlertForm .alert-content h3 {
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  .alert .deleteAlertForm .alert-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .alert .deleteAlertForm .alert-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .alert .deleteAlertForm .alert-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .alert .deleteAlertForm .alert-btns .deleteBtn {
+    background-color: red;
+    color: white;
+  }
+  .alertActive .deleteAlertForm {
     background-color: wheat;
     padding: 1rem 1rem;
     border-radius: 1rem;
     text-align: center;
     position: fixed;
     transition: all 0.8s ease;
-    top: 14%;
-    left: 1%;
-    width: 100%;
+    top: 10%;
+    left: -150%;
+    width: 70%;
   }
-  .deleteAlertForm .alert-header {
+  .alertActive .deleteAlertForm .alert-header {
     margin-bottom: 1.6rem;
   }
-  .deleteAlertForm .alert-header .bx-x {
+  .alertActive .deleteAlertForm .alert-header .bx-x {
     font-size: 6.5rem;
     color: red;
     border: 1px solid red;
     border-radius: 50%;
   }
-  .deleteAlertForm .alert-content {
+  .alertActive .deleteAlertForm .alert-content {
     margin-bottom: 1.6rem;
   }
-  .deleteAlertForm .alert-content h3 {
+  .alertActive .deleteAlertForm .alert-content h3 {
     font-weight: normal;
     font-size: 1.9rem;
     margin-bottom: 1rem;
   }
-  .deleteAlertForm .alert-btns {
+  .alertActive .deleteAlertForm .alert-btns {
     display: flex;
     justify-content: center;
     gap: 1rem;
   }
-  .deleteAlertForm .alert-btns button {
+  .alertActive .deleteAlertForm .alert-btns button {
     padding: 0.3rem 1rem;
     font-size: 1rem;
     border: none;
@@ -666,25 +837,38 @@ body {
     background-color: #aadefa;
     cursor: pointer;
   }
-  .deleteAlertForm .alert-btns button:hover {
+  .alertActive .deleteAlertForm .alert-btns button:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: scale(0.9);
     transition: 0.2s;
   }
-  .deleteAlertForm .alert-btns .deleteBtn {
+  .alertActive .deleteAlertForm .alert-btns .deleteBtn {
     background-color: red;
     color: white;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 520px) {
+  .contactsContainer {
+    display: flex;
+    background-color: white;
+    color: black;
+  }
+  .contactsContainer .section-image {
+    display: none;
+  }
+  .contactsContainer .contacts {
+    width: 100%;
+    box-shadow: none;
+  }
   .header {
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
     display: flex;
     justify-content: flex-end;
   }
   .header .createBtn {
     display: flex;
-    background-color: #aadefa;
+    background-color: black;
+    color: white;
     border: none;
     cursor: pointer;
     align-items: center;
@@ -696,7 +880,7 @@ body {
   }
   .header .createBtn:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(0.9);
+    background-color: rgba(0, 0, 0, 0.911);
     transition: 0.2s;
   }
   .contacts {
@@ -764,11 +948,13 @@ body {
     transition: all 0.7s ease;
   }
   .addContactForm {
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 2rem 1rem;
     border-radius: 0rem;
     position: fixed;
-    top: 0%;
+    transition: all 0.3s ease;
+    top: 17%;
     left: 0%;
     width: 100%;
   }
@@ -777,29 +963,31 @@ body {
     flex-direction: column;
     gap: 0.6rem;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   .addContactForm .form-header .bx-user {
     font-size: 6rem;
-    background-color: #aadefa;
-    color: blue;
+    background-color: white;
+    color: black;
     border-radius: 50%;
   }
   .addContactForm .form-field {
     display: flex;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.2rem;
     flex-direction: column;
     gap: 0.6rem;
   }
   .addContactForm .form-field input {
-    padding: 0.3rem 0.5rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.5rem;
     width: 98%;
+    color: white;
     border: 1px solid gray;
     background-color: transparent;
     outline: none;
   }
   .addContactForm .form-field input:focus {
-    outline: 1px solid #aadefa;
+    outline: 1px solid white;
   }
   .addContactForm .form-field .form-btns button {
     padding: 0.3rem 1rem;
@@ -812,7 +1000,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-bottom: 1rem;
     gap: 0.9rem;
   }
   .addContactForm .form-btns button {
@@ -820,7 +1007,7 @@ body {
     font-size: 0.9rem;
     border: none;
     border-radius: 0.4rem;
-    background-color: #aadefa;
+    background-color: white;
     cursor: pointer;
   }
   .addContactForm .form-btns button:hover {
@@ -830,41 +1017,105 @@ body {
   }
   .addContactFormActive {
     left: -150%;
+    background-color: wheat;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 10%;
+    width: 70%;
+  }
+  .addContactFormActive .form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .addContactFormActive .form-header .bx-user {
+    font-size: 7rem;
+    background-color: #aadefa;
+    color: blue;
+    border-radius: 50%;
+  }
+  .addContactFormActive .form-field {
+    display: flex;
+    margin-bottom: 1.3rem;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .addContactFormActive .form-field input {
+    padding: 0.3rem 0.5rem;
+    width: 98%;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+  }
+  .addContactFormActive .form-field input:focus {
+    outline: 1px solid #aadefa;
+  }
+  .addContactFormActive .form-field .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .addContactFormActive .form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.9rem;
+  }
+  .addContactFormActive .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .addContactFormActive .form-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
   }
   .details {
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 1rem;
+    border-radius: 0rem;
     position: fixed;
-    right: 1%;
-    top: 1%;
+    top: 17%;
+    left: 0%;
     width: 100%;
   }
   .details .headerSect {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
     gap: 0.6rem;
     align-items: center;
   }
   .details .headerSect h3 {
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .details .headerSect .bx-user {
-    font-size: 5rem;
-    background-color: #aadefa;
-    color: blue;
-    margin-bottom: 1rem;
+    font-size: 6rem;
+    background-color: white;
+    color: black;
     border-radius: 50%;
   }
   .details .detailsForm {
     display: flex;
     flex-direction: column;
-    gap: 1.9rem;
+    gap: 1.8rem;
   }
   .details .detailsForm .name {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
   }
   .details .back {
     text-align: end;
@@ -874,7 +1125,7 @@ body {
     font-size: 1rem;
     border: none;
     border-radius: 0.4rem;
-    background-color: #aadefa;
+    background-color: white;
     cursor: pointer;
   }
   .details .back button:hover {
@@ -888,40 +1139,92 @@ body {
   .userDetailcontainerActive .details {
     display: none;
   }
-  .deleteAlertForm {
+  .alert .deleteAlertForm {
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 27%;
+    left: 12%;
+    width: 19.5rem;
+  }
+  .alert .deleteAlertForm .alert-header {
+    margin-bottom: 1.6rem;
+  }
+  .alert .deleteAlertForm .alert-header .bx-x {
+    font-size: 5rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+  .alert .deleteAlertForm .alert-content {
+    margin-bottom: 1.6rem;
+  }
+  .alert .deleteAlertForm .alert-content h3 {
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  .alert .deleteAlertForm .alert-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .alert .deleteAlertForm .alert-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .alert .deleteAlertForm .alert-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .alert .deleteAlertForm .alert-btns .deleteBtn {
+    background-color: red;
+    color: white;
+  }
+  .alertActive .deleteAlertForm {
     background-color: wheat;
     padding: 1rem 1rem;
     border-radius: 1rem;
     text-align: center;
     position: fixed;
     transition: all 0.8s ease;
-    top: 14%;
-    left: 1%;
-    width: 100%;
+    top: 10%;
+    left: -150%;
+    width: 70%;
   }
-  .deleteAlertForm .alert-header {
+  .alertActive .deleteAlertForm .alert-header {
     margin-bottom: 1.6rem;
   }
-  .deleteAlertForm .alert-header .bx-x {
+  .alertActive .deleteAlertForm .alert-header .bx-x {
     font-size: 6.5rem;
     color: red;
     border: 1px solid red;
     border-radius: 50%;
   }
-  .deleteAlertForm .alert-content {
+  .alertActive .deleteAlertForm .alert-content {
     margin-bottom: 1.6rem;
   }
-  .deleteAlertForm .alert-content h3 {
+  .alertActive .deleteAlertForm .alert-content h3 {
     font-weight: normal;
     font-size: 1.9rem;
     margin-bottom: 1rem;
   }
-  .deleteAlertForm .alert-btns {
+  .alertActive .deleteAlertForm .alert-btns {
     display: flex;
     justify-content: center;
     gap: 1rem;
   }
-  .deleteAlertForm .alert-btns button {
+  .alertActive .deleteAlertForm .alert-btns button {
     padding: 0.3rem 1rem;
     font-size: 1rem;
     border: none;
@@ -929,12 +1232,407 @@ body {
     background-color: #aadefa;
     cursor: pointer;
   }
-  .deleteAlertForm .alert-btns button:hover {
+  .alertActive .deleteAlertForm .alert-btns button:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: scale(0.9);
     transition: 0.2s;
   }
-  .deleteAlertForm .alert-btns .deleteBtn {
+  .alertActive .deleteAlertForm .alert-btns .deleteBtn {
+    background-color: red;
+    color: white;
+  }
+}
+@media (max-width: 360px) {
+  .contactsContainer {
+    display: flex;
+    background-color: white;
+    color: black;
+  }
+  .contactsContainer .section-image {
+    display: none;
+  }
+  .contactsContainer .contacts {
+    width: 100%;
+    box-shadow: none;
+  }
+  .header {
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header .createBtn {
+    display: flex;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .header .createBtn .bx-plus {
+    font-size: 1rem;
+  }
+  .header .createBtn:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgba(0, 0, 0, 0.911);
+    transition: 0.2s;
+  }
+  .contacts {
+    padding: 1rem;
+  }
+  .contacts .hidenData {
+    display: none;
+  }
+  .contacts .contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 0.6rem;
+  }
+  .contacts a {
+    text-decoration: none;
+    color: black;
+  }
+  .contacts .bx {
+    font-size: 1.2rem;
+  }
+  .contacts .moreDetails {
+    display: flex;
+    gap: 0.4rem;
+  }
+  .contacts .contact {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts .trashContent {
+    display: none;
+  }
+  .contacts h3 {
+    font-weight: normal;
+    font-size: 0.9rem;
+  }
+  .contacts .features {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .contacts .features:hover {
+    transform: scale(0.9);
+    transition: 0.5s;
+  }
+  .contacts .contactTabs {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts .contactTabs button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .contacts .contactTabs .activeTab {
+    background-color: #aadefa;
+    border-radius: 0.5rem;
+    transition: all 0.7s ease;
+  }
+  .addContactForm {
+    background-color: black;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 0rem;
+    position: fixed;
+    transition: all 0.3s ease;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+  }
+  .addContactForm .form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .addContactForm .form-header .bx-user {
+    font-size: 6rem;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+  }
+  .addContactForm .form-field {
+    display: flex;
+    margin-bottom: 1.2rem;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .addContactForm .form-field input {
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.5rem;
+    width: 98%;
+    color: white;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+  }
+  .addContactForm .form-field input:focus {
+    outline: 1px solid white;
+  }
+  .addContactForm .form-field .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .addContactForm .form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.9rem;
+  }
+  .addContactForm .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    cursor: pointer;
+  }
+  .addContactForm .form-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .addContactFormActive {
+    left: -150%;
+    background-color: wheat;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 10%;
+    width: 70%;
+  }
+  .addContactFormActive .form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .addContactFormActive .form-header .bx-user {
+    font-size: 7rem;
+    background-color: #aadefa;
+    color: blue;
+    border-radius: 50%;
+  }
+  .addContactFormActive .form-field {
+    display: flex;
+    margin-bottom: 1.3rem;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .addContactFormActive .form-field input {
+    padding: 0.3rem 0.5rem;
+    width: 98%;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+  }
+  .addContactFormActive .form-field input:focus {
+    outline: 1px solid #aadefa;
+  }
+  .addContactFormActive .form-field .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .addContactFormActive .form-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.9rem;
+  }
+  .addContactFormActive .form-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .addContactFormActive .form-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .details {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0rem;
+    position: fixed;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+  }
+  .details .headerSect {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .details .headerSect h3 {
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+  .details .headerSect .bx-user {
+    font-size: 6rem;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+  }
+  .details .detailsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  .details .detailsForm .name {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .details .back {
+    text-align: end;
+  }
+  .details .back button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    cursor: pointer;
+  }
+  .details .back button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .userDetailcontainer .details {
+    display: block;
+  }
+  .userDetailcontainerActive .details {
+    display: none;
+  }
+  .alert .deleteAlertForm {
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 25%;
+    left: 7.5%;
+    width: 19rem;
+  }
+  .alert .deleteAlertForm .alert-header {
+    margin-bottom: 1.6rem;
+  }
+  .alert .deleteAlertForm .alert-header .bx-x {
+    font-size: 5rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+  .alert .deleteAlertForm .alert-content {
+    margin-bottom: 1.6rem;
+  }
+  .alert .deleteAlertForm .alert-content h3 {
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  .alert .deleteAlertForm .alert-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .alert .deleteAlertForm .alert-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .alert .deleteAlertForm .alert-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .alert .deleteAlertForm .alert-btns .deleteBtn {
+    background-color: red;
+    color: white;
+  }
+  .alertActive .deleteAlertForm {
+    background-color: wheat;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 10%;
+    left: -150%;
+    width: 70%;
+  }
+  .alertActive .deleteAlertForm .alert-header {
+    margin-bottom: 1.6rem;
+  }
+  .alertActive .deleteAlertForm .alert-header .bx-x {
+    font-size: 6.5rem;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+  .alertActive .deleteAlertForm .alert-content {
+    margin-bottom: 1.6rem;
+  }
+  .alertActive .deleteAlertForm .alert-content h3 {
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  .alertActive .deleteAlertForm .alert-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .alertActive .deleteAlertForm .alert-btns button {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #aadefa;
+    cursor: pointer;
+  }
+  .alertActive .deleteAlertForm .alert-btns button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+  .alertActive .deleteAlertForm .alert-btns .deleteBtn {
     background-color: red;
     color: white;
   }

@@ -26,14 +26,15 @@ console.log(
   contactContainers
 );
 
-const savedUsers = JSON.parse(localStorage.getItem("users"));
+const savedUsers= JSON.parse(localStorage.getItem("users"));
 const trashSavedUsers = JSON.parse(localStorage.getItem("trashUsers"));
 const users = savedUsers || [];
 // console.log(users);
-renderUsers(users);
 const trashUsers = trashSavedUsers || [];
+renderUsers(users);
+renderTrashedUsers()
+// toTrash(trashUsers)
 // console.log(trashUsers);
-
 contactsBtn.style.borderBottom = "1px solid red";
 trushBtn.addEventListener("click", function () {
   trashContent.style.display = "block";
@@ -78,10 +79,10 @@ contactSubmissionForm.addEventListener("submit", function (e) {
 });
 
 function renderUsers(users) {
-  console.log(users);
+  // console.log(users);
   contactContainer.innerHTML = "";
   users.forEach((user) => {
-    console.log(user);
+    // console.log(user);
     const userHtml = `<div class="contactCalling">
      <h3>${user?.name}</h3>
      <a  class="hidenData"  href="#"><h3>${user?.email}</h3></a>
@@ -138,7 +139,7 @@ function exitDetails() {
   userDetailcontainer.classList.add("userDetailcontainerActive");
 }
 function takeToTrash(id) {
-  console.log();
+  // console.log();
   // alertText.classList.add("alert");
   // alertText.classList.remove("alertActive");
   overlay.style.display = "block";
@@ -153,7 +154,7 @@ function takeToTrash(id) {
 </div>
     <div class="alert-btns">
         <button onclick="cancelTrash()" id="quitBtn">Back</button>
-        <button onclick='toTrash(${id})'  id="deleteBtn" class="deleteBtn">Delete</button>
+        <button onclick='deleteUserById(${id})'  id="deleteBtn" class="deleteBtn">Delete</button>
  </div> 
 </div>`;
 }
@@ -162,14 +163,76 @@ function cancelTrash() {
   alertText.classList.add("alertActive");
   overlay.style.display = "none";
 }
-function toTrash(id) {
-  trashUsers.push(users.find((user) => user.id == id));
+function deleteUserById(id) {
+  //FIND USER AND FILTER HIM OUT
+  console.log(users);
+  const trashedUser =users.find((user)=>user.id===id)
+  const updatedUsers =users.filter((user)=>user.id!=id)
+  console.log(updatedUsers);
+  //uPDATE THE LOCAL STORAGE WITH THE NEW USERS
+  localStorage.setItem("users", JSON.stringify(updatedUsers));
+  //UPDATE THE UI WITH THE NEW USERS
+  renderUsers(updatedUsers)
+  //ADD THIS USER TO THE TRASH ARRAY
+
+  console.log(trashedUser);
+  trashUsers.push(trashedUser);
+  console.log(trashUsers);
+  //UPDATE LOCALSTORAGE WITH TRASH
   localStorage.setItem("trashUsers", JSON.stringify(trashUsers));
   console.log(trashUsers);
+  //UPDATE UI TRASH USERS
+  // console.log(trashUsers);
   window.location.reload();
-  
+   //UPDATE UI TRASH USERS
+renderTrashedUsers()
 }
-let arr = [1, 2, 3, 4, 5,6,7];
-let removedElements = arr.splice(4, 3);
-console.log(removedElements);
-console.log(arr);
+function renderTrashedUsers(){
+  trashUsers.forEach((trashUser)=>{
+    // contactContainers.innerHTML="" 
+    const trashUserHtml=` <div class="trashCoantainer">
+    <h3>${trashUser.name}</h3>
+    <a  class="hidenData"  href="#"><h3>${trashUser.email}</h3></a>
+    <a  class="hidenData"  href="#"> <h3>${trashUser.number}</h3></a>
+    <div class="moreDetails">
+       <button id="detailsBtn" class="features"> <i class='bx bxs-user-detail features'></i></button>
+       <button class="deleteBtn features"> <i class='bx bx-trash features'></i></button>
+    </div>
+    </div> `;
+    contactContainers.insertAdjacentHTML("beforeend", trashUserHtml);
+   })
+}
+// function toTrash(id) {
+//   let removedUser=users.splice() 
+//   // console.log(users);
+//   // console.log(removedUser);
+//   // localStorage.removeItem(id)
+//   // console.log(users);   
+//   trashUsers.concat(removedUser)
+//   // trashUsers.push(removedUser) 
+//   console.log(trashUsers);
+//   trashUsers.push(users.find((user) => user.id == id));
+//   localStorage.setItem("trashUsers", JSON.stringify(trashUsers));
+
+
+//   // console.log(trashUsers);
+//   // window.location.reload();
+//   contactContainers.innerHTML=""
+//   trashUsers.forEach((trashUser)=>{
+//     const trashUserHtml = `<div class="trashCoantainer">
+//      <h3>${trashUser.name}</h3>
+//      <a  class="hidenData"  href="#"><h3>${trashUser.email}</h3></a>
+//      <a  class="hidenData"  href="#"> <h3>${trashUser.number}</h3></a>
+//      <div class="moreDetails">
+//         <button onclick='viewUser(${trashUser.id})' class="features"> <i class='bx bxs-user-detail features'></i></button>
+//         <button onclick='takeToTrash(${trashUser.id})' class="deleteBtn features"> <i class='bx bx-trash features'></i></button>
+//      </div>
+//      </div>`;
+//     contactContainers.insertAdjacentHTML("beforeend", trashUserHtml);
+//   })
+// }
+
+// let arr = [1, 2, 3, 4, 5,6,7];
+// let removedElements = arr.splice(4, 3);
+// console.log(removedElements);
+// console.log(arr);

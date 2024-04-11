@@ -9,14 +9,47 @@
 body{
     position: relative;
 }
+//container Settings
+.contactsContainer{
+    display: flex;
+    background-color: white;
+    color: black;
+.section-image{
+    background-color: black;
+    width: 50%;
+    height: 100%;
+    img {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+       opacity: .5;
+        object-fit: cover;
+    }
+}
+.contacts{
+    width: 66%;
+    // border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+}
 // the header settings
+// .header-nav{
+//     // position: fixed;
+//     // top: 0%;
+//     // left: 0%;
+//     // width: 50%;
+//     // z-index: 1000;
+// }
 .header{
-padding:1rem 2rem;
+padding:0.5rem 1rem;
+margin-bottom: 1rem;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
  .createBtn{
 display: flex;
-background-color: #aadefa;
+background-color: black;
+color: white;
 border: none;
 cursor: pointer;
 align-items: center;
@@ -24,10 +57,11 @@ border-radius: 0.5rem;
 padding:0.7rem 1rem;
 .bx-plus{
     font-size: 1rem;
+    color: white;
 }
 &:hover{
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-transform: scale(0.9); 
+ background-color: rgba(0, 0, 0, 0.91);
 transition: 0.2s; 
 }
  }   
@@ -35,7 +69,7 @@ transition: 0.2s;
 
 // the body/contacts settings
 .contacts{
-padding: 2rem;
+padding: 0.2rem 1rem;
 .contact-header{
     display: flex;
     justify-content: space-between;
@@ -49,6 +83,7 @@ padding: 2rem;
  }  
 .bx{
     font-size: 1.2rem;
+    color: black;
 }
 .moreDetails{
     display: flex;
@@ -84,12 +119,14 @@ padding: 2rem;
 }
 .contactTabs{
 margin-bottom: 2rem;
+color: black;
 display: flex;
 justify-content: space-between;
 align-items: center;
 // gap: 5rem;
 button{
     padding: 0.3rem 1rem;
+    color: black;
     font-size: 1rem;
     border: none;
     background-color: transparent;
@@ -110,14 +147,15 @@ button{
 }
 // add user form
 .addContactForm{
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 2rem 1rem;
     border-radius: 1rem;
     position: fixed;
-    transition: all 0.8s ease;
-    top: 10%;
-    left: 15%;
-    width: 70%;
+    transition: all 0.5s ease;
+    top: 3.69%;
+    left: 35%;
+    width: 22.5rem;
 .form-header{
 display: flex;
 flex-direction: column;
@@ -126,8 +164,8 @@ align-items: center;
 margin-bottom: 2rem;
 .bx-user{
     font-size: 7rem;
-    background-color: #aadefa;
-    color: blue;
+    background-color: white;
+    color: black;
     border-radius: 50%;
 }
 }
@@ -137,14 +175,16 @@ margin-bottom: 2rem;
     flex-direction: column;
     gap: 0.6rem;
 input{
-    padding:0.3rem 0.5rem;
+    padding:0.4rem 0.5rem;
+    border-radius: 0.5rem;
     width: 98%;
+    color: white;
     border: 1px solid gray;
     background-color: transparent;
     outline: none;
 }
  input:focus{
-    outline: 1px solid #aadefa;
+    outline: 1px solid white;
  } 
 .form-btns{
 button{
@@ -166,7 +206,7 @@ gap: 0.9rem;
         font-size: .9rem;
         border: none;
         border-radius: 0.4rem;
-        background-color: #aadefa;
+        background-color: white;
         cursor: pointer;
         &:hover{
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
@@ -246,15 +286,18 @@ gap: 0.9rem;
 }
 // contact details
 .details{
-background-color: wheat;
+background-color: black;
+color: white;
 padding: 1rem;
+border-radius: 0.5rem;
 position: fixed;
-right: 23%;
-top: 1%;
-width: 65%;
+top: 3.69%;
+left: 35%;
+width: 22.5rem;
 .headerSect{
 display: flex;
 flex-direction: column;
+margin-bottom: 1rem;
 gap: 0.6rem;
 align-items: center;
     h3{
@@ -263,8 +306,8 @@ align-items: center;
     }
 .bx-user{
     font-size: 7rem;
-    background-color: #aadefa;
-    color: blue;
+    background-color: white;
+    color: black;
     border-radius: 50%;
 }    
 }
@@ -285,7 +328,7 @@ button{
     font-size: 1rem;
     border: none;
     border-radius: 0.4rem;
-    background-color: #aadefa;
+    background-color: white;
     cursor: pointer;
     &:hover{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
@@ -360,19 +403,20 @@ display: none;
 // }
 .alert{
     .deleteAlertForm{
-        background-color: wheat;
+        background-color: rgba(0, 0, 0, 0.788);
+        color: white;
         padding: 1rem 1rem;
         border-radius: 1rem;
         text-align: center;
         position: fixed;
         transition: all 0.8s ease;
-        top: 10%;
-        left: 15%;
-        width: 70%;
+        top: 25%;
+        left: 35%;
+        width: 26rem;
     .alert-header{
     margin-bottom: 1.6rem;
     .bx-x{
-        font-size: 6.5rem;
+        font-size: 5rem;
         // background-color: #aadefa;
         color: red;
         border: 1px solid red;
@@ -396,7 +440,8 @@ display: none;
             font-size: 1rem;
             border: none;
             border-radius: 0.4rem;
-            background-color: #aadefa;
+            background-color: white;
+            font-weight: bold;
             cursor: pointer;
             &:hover{
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
@@ -476,15 +521,30 @@ display: none;
   .overlay{
     display: none;
   }
-@media(max-width:520px){
+@media(max-width:890px){
+ //container Settings
+.contactsContainer{
+    display: flex;
+    background-color: white;
+    color: black;
+.section-image{
+ display: none;  
+}
+.contacts{
+    width: 100%;
+    // border: 1px solid gray;
+    box-shadow: none;
+}
+}
  // the header settings   
     .header{
-        padding:1rem 1rem;
+        padding:0.5rem 0.5rem;
             display: flex;
             justify-content: flex-end;
          .createBtn{
         display: flex;
-        background-color: #aadefa;
+        background-color: black;
+        color: white;
         border: none;
         cursor: pointer;
         align-items: center;
@@ -495,7 +555,7 @@ display: none;
         }
         &:hover{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-        transform: scale(0.9); 
+        background-color: rgba(0, 0, 0, 0.911); 
         transition: 0.2s; 
         }
          }   
@@ -568,22 +628,95 @@ display: none;
         } 
 // add user form
 .addContactForm{
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 2rem 1rem;
-    border-radius: 0rem;
+    // margin-left: 1rem;
+    // margin-right: 1rem;
+    border-radius: 0.5rem;
     position: fixed;
-    top: 0%;
-    // bottom: 1rem;
-    left: 0%;
-    width: 100%;
+    transition: all 0.3s ease;
+    top: 25%;
+    left: 7%;
+    width: 85%;
 .form-header{
 display: flex;
 flex-direction: column;
 gap: 0.6rem;
 align-items: center;
-margin-bottom: 1rem;
+margin-bottom: 1.5rem;
 .bx-user{
     font-size: 6rem;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+}
+.form-field{
+    display: flex;
+    margin-bottom: 1.2rem;
+    flex-direction: column;
+    gap: 0.6rem;
+input{
+    padding:0.4rem 0.5rem;
+    border-radius: 0.5rem;
+    width: 98%;
+    color: white;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+}
+ input:focus{
+    outline: 1px solid white;
+ } 
+.form-btns{
+button{
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+}
+}
+.form-btns{
+display: flex;
+align-items: center;
+justify-content: end;
+gap: 0.9rem;
+    button{
+        padding: 0.3rem 1rem;
+        font-size: .9rem;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: white;
+        cursor: pointer;
+        &:hover{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+            transform: scale(0.9); 
+            transition: 0.2s; 
+            }
+    }
+    }
+}
+.addContactFormActive{
+    left: -150%;
+    background-color: wheat;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 10%;
+    // left: 15%;
+    width: 70%;
+.form-header{
+display: flex;
+flex-direction: column;
+gap: 0.6rem;
+align-items: center;
+margin-bottom: 2rem;
+.bx-user{
+    font-size: 7rem;
     background-color: #aadefa;
     color: blue;
     border-radius: 50%;
@@ -609,7 +742,6 @@ button{
     padding: 0.3rem 1rem;
     font-size: 1rem;
     border: none;
-
     background-color: transparent;
     cursor: pointer;
 }
@@ -619,7 +751,6 @@ button{
 display: flex;
 align-items: center;
 justify-content: end;
-margin-bottom: 1rem;
 gap: 0.9rem;
     button{
         padding: 0.3rem 1rem;
@@ -635,133 +766,205 @@ gap: 0.9rem;
             }
     }
     }
-} 
-.addContactFormActive{
-    left: -150%;
-} 
+}
 // contact details
 .details{
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 1rem;
+    border-radius: 0rem;
     position: fixed;
-    right: 23%;
-    top: 1%;
-    width: 65%;
+    top: 25%;
+    left:8%; 
+    width: 85%;
     .headerSect{
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
     gap: 0.6rem;
     align-items: center;
+        h3{
+            font-weight: normal;
+            font-size: 1.5rem;
+        }
+    .bx-user{
+        font-size: 6rem;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+    }    
+    }
+    .detailsForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    .name{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    }
+    } 
+    .back{
+    text-align: end;
+    button{
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: white;
+        cursor: pointer;
+        &:hover{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+            transform: scale(0.9); 
+            transition: 0.2s; 
+            }
+    }
+    }   
+    }
+    .userDetailcontainer{
+    .details{
+    display: block;
+    }    
+    }
+    .userDetailcontainerActive{
+    .details{
+    display: none;
+    }    
+    }
+// The delete alert settings
+.alert{
+    .deleteAlertForm{
+        background-color: rgba(0, 0, 0, 0.788);
+        color: white;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        position: fixed;
+        transition: all 0.8s ease;
+        top: 29%;
+        left: 25%;
+        width: 27rem;
+    .alert-header{
+    margin-bottom: 1.6rem;
+    .bx-x{
+        font-size: 5rem;
+        // background-color: #aadefa;
+        color: red;
+        border: 1px solid red;
+        border-radius: 50%;
+    }    
+    }
+    .alert-content{
+        margin-bottom: 1.6rem;
         h3{
             font-weight: normal;
             font-size: 1.9rem;
+            margin-bottom: 1rem;
         }
-    .bx-user{
-        font-size: 7rem;
-        background-color: #aadefa;
-        color: blue;
+    }
+    .alert-btns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+        button{
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            background-color: white;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+                transform: scale(0.9); 
+                transition: 0.2s; 
+                }
+        }   
+    .deleteBtn{
+        background-color: red;
+        color: white;
+    } 
+    }
+    }    
+}
+.alertActive{
+    .deleteAlertForm{
+        background-color: wheat;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        position: fixed;
+        transition: all 0.8s ease;
+        top: 10%;
+        left: -150%;
+        width: 70%;
+    .alert-header{
+    margin-bottom: 1.6rem;
+    .bx-x{
+        font-size: 6.5rem;
+        // background-color: #aadefa;
+        color: red;
+        border: 1px solid red;
         border-radius: 50%;
     }    
     }
-    .detailsForm{
+    .alert-content{
+        margin-bottom: 1.6rem;
+        h3{
+            font-weight: normal;
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .alert-btns{
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    .name{
-    display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 1rem;
-    }
+        button{
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            background-color: #aadefa;
+            cursor: pointer;
+            &:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+                transform: scale(0.9); 
+                transition: 0.2s; 
+                }
+        }   
+    .deleteBtn{
+        background-color: red;
+        color: white;
     } 
-    .back{
-    text-align: end;
-    button{
-        padding: 0.3rem 1rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 0.4rem;
-        background-color: #aadefa;
-        cursor: pointer;
-        &:hover{
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-            transform: scale(0.9); 
-            transition: 0.2s; 
-            }
     }
-    }   
-    }
-    .userDetailcontainer{
-    .details{
-    display: block;
     }    
-    }
-    .userDetailcontainerActive{
-    .details{
-    display: none;
-    }    
-    }
-// The delete alert settings
-.deleteAlertForm{
-    background-color: wheat;
-    padding: 1rem 1rem;
-    border-radius: 1rem;
-    text-align: center;
-    position: fixed;
-    transition: all 0.8s ease;
-    top: 14%;
-    left: 1%;
+}
+}
+@media(max-width:520px){
+ //container Settings
+.contactsContainer{
+    display: flex;
+    background-color: white;
+    color: black;
+.section-image{
+ display: none;  
+}
+.contacts{
     width: 100%;
-.alert-header{
-margin-bottom: 1.6rem;
-.bx-x{
-    font-size: 6.5rem;
-    // background-color: #aadefa;
-    color: red;
-    border: 1px solid red;
-    border-radius: 50%;
-}    
+    // border: 1px solid gray;
+    box-shadow: none;
 }
-.alert-content{
-    margin-bottom: 1.6rem;
-    h3{
-        font-weight: normal;
-        font-size: 1.9rem;
-        margin-bottom: 1rem;
-    }
 }
-.alert-btns{
-display: flex;
-justify-content: center;
-gap: 1rem;
-    button{
-        padding: 0.3rem 1rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 0.4rem;
-        background-color: #aadefa;
-        cursor: pointer;
-        &:hover{
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-            transform: scale(0.9); 
-            transition: 0.2s; 
-            }
-    }   
-.deleteBtn{
-    background-color: red;
-    color: white;
-} 
-}
-} 
-}
-@media(max-width:360px){
  // the header settings   
     .header{
-        padding:1rem 1rem;
+        padding:0.5rem 0.5rem;
             display: flex;
             justify-content: flex-end;
          .createBtn{
         display: flex;
-        background-color: #aadefa;
+        background-color: black;
+        color: white;
         border: none;
         cursor: pointer;
         align-items: center;
@@ -772,7 +975,7 @@ gap: 1rem;
         }
         &:hover{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-        transform: scale(0.9); 
+        background-color: rgba(0, 0, 0, 0.911); 
         transition: 0.2s; 
         }
          }   
@@ -845,12 +1048,13 @@ gap: 1rem;
         } 
 // add user form
 .addContactForm{
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 2rem 1rem;
     border-radius: 0rem;
     position: fixed;
-    top: 0%;
-    // bottom: 1rem;
+    transition: all 0.3s ease;
+    top: 17%;
     left: 0%;
     width: 100%;
 .form-header{
@@ -858,9 +1062,79 @@ display: flex;
 flex-direction: column;
 gap: 0.6rem;
 align-items: center;
-margin-bottom: 1rem;
+margin-bottom: 1.5rem;
 .bx-user{
     font-size: 6rem;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+}
+.form-field{
+    display: flex;
+    margin-bottom: 1.2rem;
+    flex-direction: column;
+    gap: 0.6rem;
+input{
+    padding:0.4rem 0.5rem;
+    border-radius: 0.5rem;
+    width: 98%;
+    color: white;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+}
+ input:focus{
+    outline: 1px solid white;
+ } 
+.form-btns{
+button{
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+}
+}
+.form-btns{
+display: flex;
+align-items: center;
+justify-content: end;
+gap: 0.9rem;
+    button{
+        padding: 0.3rem 1rem;
+        font-size: .9rem;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: white;
+        cursor: pointer;
+        &:hover{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+            transform: scale(0.9); 
+            transition: 0.2s; 
+            }
+    }
+    }
+}
+.addContactFormActive{
+    left: -150%;
+    background-color: wheat;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 10%;
+    // left: 15%;
+    width: 70%;
+.form-header{
+display: flex;
+flex-direction: column;
+gap: 0.6rem;
+align-items: center;
+margin-bottom: 2rem;
+.bx-user{
+    font-size: 7rem;
     background-color: #aadefa;
     color: blue;
     border-radius: 50%;
@@ -886,7 +1160,6 @@ button{
     padding: 0.3rem 1rem;
     font-size: 1rem;
     border: none;
-
     background-color: transparent;
     cursor: pointer;
 }
@@ -896,7 +1169,6 @@ button{
 display: flex;
 align-items: center;
 justify-content: end;
-margin-bottom: 1rem;
 gap: 0.9rem;
     button{
         padding: 0.3rem 1rem;
@@ -912,43 +1184,42 @@ gap: 0.9rem;
             }
     }
     }
-} 
-.addContactFormActive{
-    left: -150%;
-} 
+}
 // contact details
 .details{
-    background-color: wheat;
+    background-color: black;
+    color: white;
     padding: 1rem;
+    border-radius: 0rem;
     position: fixed;
-    right: 1%;
-    top: 1%;
+    top: 17%;
+    left: 0%;
     width: 100%;
     .headerSect{
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
     gap: 0.6rem;
     align-items: center;
         h3{
             font-weight: normal;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
     .bx-user{
-        font-size: 5rem;
-        background-color: #aadefa;
-        color: blue;
-        margin-bottom: 1rem;
+        font-size: 6rem;
+        background-color: white;
+        color: black;
         border-radius: 50%;
     }    
     }
     .detailsForm{
     display: flex;
     flex-direction: column;
-    gap: 1.9rem;
+    gap: 1.8rem;
     .name{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
     }
     } 
     .back{
@@ -958,7 +1229,7 @@ gap: 0.9rem;
         font-size: 1rem;
         border: none;
         border-radius: 0.4rem;
-        background-color: #aadefa;
+        background-color: white;
         cursor: pointer;
         &:hover{
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
@@ -979,41 +1250,347 @@ gap: 0.9rem;
     }    
     }
 // The delete alert settings
-.deleteAlertForm{
-    background-color: wheat;
-    padding: 1rem 1rem;
-    border-radius: 1rem;
-    text-align: center;
-    position: fixed;
-    transition: all 0.8s ease;
-    top: 14%;
-    left: 1%;
-    width: 100%;
-.alert-header{
-margin-bottom: 1.6rem;
-.bx-x{
-    font-size: 6.5rem;
-    // background-color: #aadefa;
-    color: red;
-    border: 1px solid red;
-    border-radius: 50%;
-}    
-}
-.alert-content{
+.alert{
+    .deleteAlertForm{
+        background-color: rgba(0, 0, 0, 0.788);
+        color: white;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        position: fixed;
+        transition: all 0.8s ease;
+        top: 27%;
+        left: 12%;
+        width: 19.5rem;
+    .alert-header{
     margin-bottom: 1.6rem;
-    h3{
-        font-weight: normal;
-        font-size: 1.9rem;
-        margin-bottom: 1rem;
+    .bx-x{
+        font-size: 5rem;
+        // background-color: #aadefa;
+        color: red;
+        border: 1px solid red;
+        border-radius: 50%;
+    }    
     }
+    .alert-content{
+        margin-bottom: 1.6rem;
+        h3{
+            font-weight: normal;
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .alert-btns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+        button{
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            background-color: white;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+                transform: scale(0.9); 
+                transition: 0.2s; 
+                }
+        }   
+    .deleteBtn{
+        background-color: red;
+        color: white;
+    } 
+    }
+    }    
 }
-.alert-btns{
+.alertActive{
+    .deleteAlertForm{
+        background-color: wheat;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        position: fixed;
+        transition: all 0.8s ease;
+        top: 10%;
+        left: -150%;
+        width: 70%;
+    .alert-header{
+    margin-bottom: 1.6rem;
+    .bx-x{
+        font-size: 6.5rem;
+        // background-color: #aadefa;
+        color: red;
+        border: 1px solid red;
+        border-radius: 50%;
+    }    
+    }
+    .alert-content{
+        margin-bottom: 1.6rem;
+        h3{
+            font-weight: normal;
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .alert-btns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+        button{
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            background-color: #aadefa;
+            cursor: pointer;
+            &:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+                transform: scale(0.9); 
+                transition: 0.2s; 
+                }
+        }   
+    .deleteBtn{
+        background-color: red;
+        color: white;
+    } 
+    }
+    }    
+}
+}
+@media(max-width:360px){
+//container Settings
+.contactsContainer{
+    display: flex;
+    background-color: white;
+    color: black;
+.section-image{
+ display: none;  
+}
+.contacts{
+    width: 100%;
+    // border: 1px solid gray;
+    box-shadow: none;
+}
+}
+ // the header settings   
+    .header{
+        padding:0.5rem 0.5rem;
+            display: flex;
+            justify-content: flex-end;
+         .createBtn{
+        display: flex;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+        border-radius: 0.5rem;
+        padding:0.5rem 1rem;
+        .bx-plus{
+            font-size: 1rem;
+        }
+        &:hover{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+        background-color: rgba(0, 0, 0, 0.911); 
+        transition: 0.2s; 
+        }
+         }   
+        }
+// the contacts settings
+    .contacts{
+        padding: 1rem;
+    .hidenData{
+        display: none;
+    }
+        .contact-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid gray;
+            padding-bottom: 0.6rem;
+         }
+         a{
+            text-decoration: none;
+            color: black;
+         }  
+        .bx{
+            font-size: 1.2rem;
+        }
+        .moreDetails{
+            display: flex;
+            gap: 0.4rem;
+        }  
+        .contact{
+            display: flex;
+            margin-top: 1rem;
+            justify-content: space-between;
+            align-items: center;
+             }   
+         .trashContent{
+            display: none;
+         }
+         h3{
+            font-weight: normal;
+            font-size: 0.9rem;
+         }
+         .features{
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        &:hover{
+            transform: scale(0.9);
+            transition: 0.5s;
+        }
+        }
+        .contactTabs{
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // gap: 5rem;
+        button{
+            padding: 0.3rem 0.6rem;
+            font-size: 0.9rem;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .activeTab{
+            background-color: #aadefa;
+            border-radius: 0.5rem;
+            transition: all 0.7s ease;
+        }
+        }
+        } 
+// add user form
+.addContactForm{
+    background-color: black;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 0rem;
+    position: fixed;
+    transition: all 0.3s ease;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+.form-header{
 display: flex;
-justify-content: center;
-gap: 1rem;
+flex-direction: column;
+gap: 0.6rem;
+align-items: center;
+margin-bottom: 1.5rem;
+.bx-user{
+    font-size: 6rem;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+}
+.form-field{
+    display: flex;
+    margin-bottom: 1.2rem;
+    flex-direction: column;
+    gap: 0.6rem;
+input{
+    padding:0.4rem 0.5rem;
+    border-radius: 0.5rem;
+    width: 98%;
+    color: white;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+}
+ input:focus{
+    outline: 1px solid white;
+ } 
+.form-btns{
+button{
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+}
+}
+.form-btns{
+display: flex;
+align-items: center;
+justify-content: end;
+gap: 0.9rem;
     button{
         padding: 0.3rem 1rem;
-        font-size: 1rem;
+        font-size: .9rem;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: white;
+        cursor: pointer;
+        &:hover{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+            transform: scale(0.9); 
+            transition: 0.2s; 
+            }
+    }
+    }
+}
+.addContactFormActive{
+    left: -150%;
+    background-color: wheat;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    position: fixed;
+    transition: all 0.8s ease;
+    top: 10%;
+    // left: 15%;
+    width: 70%;
+.form-header{
+display: flex;
+flex-direction: column;
+gap: 0.6rem;
+align-items: center;
+margin-bottom: 2rem;
+.bx-user{
+    font-size: 7rem;
+    background-color: #aadefa;
+    color: blue;
+    border-radius: 50%;
+}
+}
+.form-field{
+    display: flex;
+    margin-bottom: 1.3rem;
+    flex-direction: column;
+    gap: 0.6rem;
+input{
+    padding:0.3rem 0.5rem;
+    width: 98%;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+}
+ input:focus{
+    outline: 1px solid #aadefa;
+ } 
+.form-btns{
+button{
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+}
+}
+.form-btns{
+display: flex;
+align-items: center;
+justify-content: end;
+gap: 0.9rem;
+    button{
+        padding: 0.3rem 1rem;
+        font-size: .9rem;
         border: none;
         border-radius: 0.4rem;
         background-color: #aadefa;
@@ -1023,11 +1600,180 @@ gap: 1rem;
             transform: scale(0.9); 
             transition: 0.2s; 
             }
-    }   
-.deleteBtn{
-    background-color: red;
-    color: white;
-} 
+    }
+    }
 }
+// contact details
+.details{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0rem;
+    position: fixed;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+    .headerSect{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+    align-items: center;
+        h3{
+            font-weight: normal;
+            font-size: 1.5rem;
+        }
+    .bx-user{
+        font-size: 6rem;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+    }    
+    }
+    .detailsForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    .name{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    }
+    } 
+    .back{
+    text-align: end;
+    button{
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: white;
+        cursor: pointer;
+        &:hover{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+            transform: scale(0.9); 
+            transition: 0.2s; 
+            }
+    }
+    }   
+    }
+    .userDetailcontainer{
+    .details{
+    display: block;
+    }    
+    }
+    .userDetailcontainerActive{
+    .details{
+    display: none;
+    }    
+    }
+// The delete alert settings
+.alert{
+    .deleteAlertForm{
+        background-color: rgba(0, 0, 0, 0.788);
+        color: white;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        position: fixed;
+        transition: all 0.8s ease;
+        top: 25%;
+        left: 7.5%;
+        width: 19rem;
+    .alert-header{
+    margin-bottom: 1.6rem;
+    .bx-x{
+        font-size: 5rem;
+        // background-color: #aadefa;
+        color: red;
+        border: 1px solid red;
+        border-radius: 50%;
+    }    
+    }
+    .alert-content{
+        margin-bottom: 1.6rem;
+        h3{
+            font-weight: normal;
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .alert-btns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+        button{
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            background-color: white;
+            font-weight: bold;
+            cursor: pointer;
+            &:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+                transform: scale(0.9); 
+                transition: 0.2s; 
+                }
+        }   
+    .deleteBtn{
+        background-color: red;
+        color: white;
+    } 
+    }
+    }    
+}
+.alertActive{
+    .deleteAlertForm{
+        background-color: wheat;
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        position: fixed;
+        transition: all 0.8s ease;
+        top: 10%;
+        left: -150%;
+        width: 70%;
+    .alert-header{
+    margin-bottom: 1.6rem;
+    .bx-x{
+        font-size: 6.5rem;
+        // background-color: #aadefa;
+        color: red;
+        border: 1px solid red;
+        border-radius: 50%;
+    }    
+    }
+    .alert-content{
+        margin-bottom: 1.6rem;
+        h3{
+            font-weight: normal;
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .alert-btns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+        button{
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.4rem;
+            background-color: #aadefa;
+            cursor: pointer;
+            &:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+                transform: scale(0.9); 
+                transition: 0.2s; 
+                }
+        }   
+    .deleteBtn{
+        background-color: red;
+        color: white;
+    } 
+    }
+    }    
 }
 }
