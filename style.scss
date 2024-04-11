@@ -205,12 +205,12 @@ gap: 0.9rem;
         padding: 0.3rem 1rem;
         font-size: .9rem;
         border: none;
-        border-radius: 0.4rem;
+        border-radius: 0.3rem;
         background-color: white;
         cursor: pointer;
         &:hover{
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-            transform: scale(0.9); 
+           background-color: rgba(171, 171, 171, 0.929);
             transition: 0.2s; 
             }
     }
@@ -327,12 +327,12 @@ button{
     padding: 0.3rem 1rem;
     font-size: 1rem;
     border: none;
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
     background-color: white;
     cursor: pointer;
     &:hover{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-        transform: scale(0.9); 
+        background-color: rgba(171, 171, 171, 0.929);
         transition: 0.2s; 
         }
 }
@@ -439,13 +439,13 @@ display: none;
             padding: 0.3rem 1rem;
             font-size: 1rem;
             border: none;
-            border-radius: 0.4rem;
+            border-radius: 0.3rem;
             background-color: white;
             font-weight: bold;
             cursor: pointer;
             &:hover{
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-                transform: scale(0.9); 
+                // transform: scale(0.9); 
                 transition: 0.2s; 
                 }
         }   

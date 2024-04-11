@@ -100,6 +100,7 @@ function viewUser(id) {
   const user = users.find((user) => user.id == id);
   userDetailcontainer.classList.add("userDetailcontainer");
   userDetailcontainer.classList.remove("userDetailcontainerActive");
+  overlay.style.display="block";
   const dateArr = user.createdAt.split("T");
   userDetailcontainer.innerHTML = ` <div class="details detailsActive">
     <div class="headerSect">
@@ -137,6 +138,7 @@ function viewUser(id) {
 function exitDetails() {
   userDetailcontainer.classList.remove("userDetailcontainer");
   userDetailcontainer.classList.add("userDetailcontainerActive");
+  overlay.style.display="none";
 }
 function takeToTrash(id) {
   // console.log();
@@ -195,44 +197,13 @@ function renderTrashedUsers(){
     <a  class="hidenData"  href="#"><h3>${trashUser.email}</h3></a>
     <a  class="hidenData"  href="#"> <h3>${trashUser.number}</h3></a>
     <div class="moreDetails">
-       <button id="detailsBtn" class="features"> <i class='bx bxs-user-detail features'></i></button>
-       <button class="deleteBtn features"> <i class='bx bx-trash features'></i></button>
+       <button onclick='restoreContact(${trashUser.id})' class="deleteBtn features"><i class='bx bx-trash'></i></button>
     </div>
     </div> `;
     contactContainers.insertAdjacentHTML("beforeend", trashUserHtml);
    })
+  
 }
-// function toTrash(id) {
-//   let removedUser=users.splice() 
-//   // console.log(users);
-//   // console.log(removedUser);
-//   // localStorage.removeItem(id)
-//   // console.log(users);   
-//   trashUsers.concat(removedUser)
-//   // trashUsers.push(removedUser) 
-//   console.log(trashUsers);
-//   trashUsers.push(users.find((user) => user.id == id));
-//   localStorage.setItem("trashUsers", JSON.stringify(trashUsers));
 
 
-//   // console.log(trashUsers);
-//   // window.location.reload();
-//   contactContainers.innerHTML=""
-//   trashUsers.forEach((trashUser)=>{
-//     const trashUserHtml = `<div class="trashCoantainer">
-//      <h3>${trashUser.name}</h3>
-//      <a  class="hidenData"  href="#"><h3>${trashUser.email}</h3></a>
-//      <a  class="hidenData"  href="#"> <h3>${trashUser.number}</h3></a>
-//      <div class="moreDetails">
-//         <button onclick='viewUser(${trashUser.id})' class="features"> <i class='bx bxs-user-detail features'></i></button>
-//         <button onclick='takeToTrash(${trashUser.id})' class="deleteBtn features"> <i class='bx bx-trash features'></i></button>
-//      </div>
-//      </div>`;
-//     contactContainers.insertAdjacentHTML("beforeend", trashUserHtml);
-//   })
-// }
 
-// let arr = [1, 2, 3, 4, 5,6,7];
-// let removedElements = arr.splice(4, 3);
-// console.log(removedElements);
-// console.log(arr);
